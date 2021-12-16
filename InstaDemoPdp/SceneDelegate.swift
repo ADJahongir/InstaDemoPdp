@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func callHomeViewController() {
-        let vc: HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let nv: UINavigationController = UINavigationController(rootViewController: vc)
+        let vc1: HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let nv: UINavigationController = UINavigationController(rootViewController: vc1)
         if self.window == nil {
             self.window = UIWindow(frame: UIScreen.main.bounds)
         }
@@ -32,10 +32,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func callSignInViewController() {
         let vc: SignInViewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
+        let nv: UINavigationController = UINavigationController(rootViewController: vc)
         if self.window == nil {
             self.window = UIWindow(frame: UIScreen.main.bounds)
         }
-        self.window?.rootViewController = vc
+        self.window?.rootViewController = nv
         self.window?.makeKeyAndVisible()
     }
 
